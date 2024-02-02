@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/8fe2412c63.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="session.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+      crossorigin
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Calculadora lapos</title>
+  </head>
+  <body>
+    <header class="nav-bar">
+      <!--<a href="novedades.html">Novedades</a>-->
+      <a href="descuentos.html">Descuentos</a>
+      <a href="retenciones.html">Retenciones</a>
+      <a href="adicionales.html">Adicionales</a>
+      <!--<a href="precios.html">Lista</a>-->
+      <a class="active" href="calculadora.html">Calculadora</a>
+    </header>
+    <header>
+      <h1 onclick="location.reload()">Calculadora lapos</h1>
+      <i class="far fa-moon" onclick="retheme()" id="theme"></i>
+    </header>
+    <h6>Ultima actualización coeficientes: 03/10/22</h6>
+    <div class="container-form visible" id="containerForm">
+      <label>Ingresá un monto </label>
+      <input type="text" placeholder="$0,00" id="monto" maxlength="10" onkeypress="if (event.keyCode == 13) calcular()">
+      <button onclick="calcular()">  Calcular</button>
+    </div>
+    <div class="tarjetas visible" id="contenedorTarjetas">
+      
+    </div>
+    <div class="contenedor-historial invisible" id="historial">
+      
+      <div class="tarjeta-historica"></div>
+
+    </div>
+    <script src="calculadora.js"></script>
+   
+    </body>
+</html>
